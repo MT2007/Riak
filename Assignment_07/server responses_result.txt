@@ -1,0 +1,362 @@
+1_
+
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/props HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 12
+> 
+* upload completely sent off: 12 out of 12 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Date: Wed, 09 Dec 2020 19:46:16 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+* Connection #0 to host localhost left intact
+riak@labnbd-virtual-machine:/home/labnbd$  curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/A?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":1,"title":"Doc1","name":"Doc1","description":"this is the first doc","isFake":false}'
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/A?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 90
+> 
+* upload completely sent off: 90 out of 90 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEO11hYCg1zGBKZMtjZehY6nqTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:46:16 GMT
+< ETag: "6PBZYWAhxVmUgnTfghpNgd"
+< Date: Wed, 09 Dec 2020 19:46:16 GMT
+< Content-Type: application/json
+< Content-Length: 90
+< 
+* Connection #0 to host localhost left intact
+{"id":1,"title":"Doc1","name":"Doc1","description":"this is the first doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/B?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":2,"title":"Doc2","name":"Doc2","description":"this is the second doc","isFake":false}'
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/B?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 91
+> 
+* upload completely sent off: 91 out of 91 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEO7czMJQaZjAlsuWxMnQsdb3JlwUA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:46:16 GMT
+< ETag: "5938V9RUyRqmuC6MWzs4PZ"
+< Date: Wed, 09 Dec 2020 19:46:16 GMT
+< Content-Type: application/json
+< Content-Length: 91
+< 
+* Connection #0 to host localhost left intact
+{"id":2,"title":"Doc2","name":"Doc2","description":"this is the second doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/C?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":3,"title":"Doc3","name":"Doc3","description":"this is the third doc","isFake":false}'
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/C?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 90
+> 
+* upload completely sent off: 90 out of 90 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEO11hYCg1ymBK5MxjZehY6nqTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:46:16 GMT
+< ETag: "5xsyuXgcqRcnL0MW4ybCSc"
+< Date: Wed, 09 Dec 2020 19:46:16 GMT
+< Content-Type: application/json
+< Content-Length: 90
+< 
+* Connection #0 to host localhost left intact
+{"id":3,"title":"Doc3","name":"Doc3","description":"this is the third doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/D?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":4,"title":"Doc4","name":"Doc4","description":"this is the forth doc","isFake":false}'
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/D?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 90
+> 
+* upload completely sent off: 90 out of 90 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsYkKdoxMJQaZjAlsuWxMnQsdb3JlwUA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:46:16 GMT
+< ETag: "6fY32fBf9dMS9GJpNnhKoZ"
+< Date: Wed, 09 Dec 2020 19:46:17 GMT
+< Content-Type: application/json
+< Content-Length: 90
+< 
+* Connection #0 to host localhost left intact
+{"id":4,"title":"Doc4","name":"Doc4","description":"this is the forth doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/E?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":5,"title":"Doc5","name":"Doc5","description":"this is the fifth doc","isFake":false}'
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/E?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 90
+> 
+* upload completely sent off: 90 out of 90 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsZEy5QxMJQaZjAlsuaxMnQudb3JlwUA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:46:17 GMT
+< ETag: "4M39J4Gs14Yv3Ffvi6HXDi"
+< Date: Wed, 09 Dec 2020 19:46:17 GMT
+< Content-Type: application/json
+< Content-Length: 90
+< 
+* Connection #0 to host localhost left intact
+{"id":5,"title":"Doc5","name":"Doc5","description":"this is the fifth doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$
+
+
+
+2_
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEO11hYCg1zGBKZMtjZehY6nqTLwsA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s21997_MYTEST>; rel="up"
+Last-Modified: Wed, 09 Dec 2020 19:46:16 GMT
+ETag: "6PBZYWAhxVmUgnTfghpNgd"
+Date: Wed, 09 Dec 2020 19:50:14 GMT
+Content-Type: application/json
+Content-Length: 90
+
+{"id":1,"title":"Doc1","name":"Doc1","description":"this is the first doc","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$
+
+
+
+3_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/C?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 115
+> 
+* upload completely sent off: 115 out of 115 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEO11hYCg1ymBK5M5jZSha4XqTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:58:42 GMT
+< ETag: "1C8UaHpN9vHq9aNpHpNP2E"
+< Date: Wed, 09 Dec 2020 19:58:42 GMT
+< Content-Type: application/json
+< Content-Length: 115
+< 
+* Connection #0 to host localhost left intact
+{"id":3,"title":"Doc3","name":"Doc3","description":"this is the third doc","isFake":false, "newField": "NewField3"}riak@labnbd-virtual-machine:/home/labnbd$ 
+
+
+
+4_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/D?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 75
+> 
+* upload completely sent off: 75 out of 75 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsYkKdoxMJQaZjAlsuexMsxc4XqTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 19:59:21 GMT
+< ETag: "1RXYjm9ik7iIuMviedpx6J"
+< Date: Wed, 09 Dec 2020 19:59:21 GMT
+< Content-Type: application/json
+< Content-Length: 75
+< 
+* Connection #0 to host localhost left intact
+{"id":4,"title":"Doc4","name":"Doc4","description":"this is the forth doc"}riak@labnbd-virtual-machine:/home/labnbd$ 
+
+
+
+5_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s21997_MYTEST/keys/E?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 92
+> 
+* upload completely sent off: 92 out of 92 bytes
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsZEy5QxMJQaZjAlsuWxMsxY6XqTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 20:03:36 GMT
+< ETag: "tKlehq4pZLCJPPndQxb0m"
+< Date: Wed, 09 Dec 2020 20:03:36 GMT
+< Content-Type: application/json
+< Content-Length: 92
+< 
+* Connection #0 to host localhost left intact
+{"id":5,"title":"Doc5","name":"Doc5","description":"the Changed Data is here","isFake":true}riak@labnbd-virtual-machine:/home/labnbd$ 
+
+
+
+6_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> DELETE /buckets/s21997_MYTEST/keys/B?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> 
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Date: Wed, 09 Dec 2020 20:06:02 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+* Connection #0 to host localhost left intact
+
+
+
+7_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> GET /buckets/s21997_MYTEST/keys/B HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> 
+< HTTP/1.1 404 Object Not Found
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Date: Wed, 09 Dec 2020 20:09:13 GMT
+< Content-Type: text/plain
+< Content-Length: 10
+< 
+not found
+* Connection #0 to host localhost left intact
+
+
+
+8_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> POST /buckets/s21997_MYTEST/keys?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 82
+> 
+* upload completely sent off: 82 out of 82 bytes
+< HTTP/1.1 201 Created
+< X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEuygyMJQaZTAlMuaxMuxc43qTLwsA
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Location: /buckets/s21997_MYTEST/keys/3ZWu9T7Krz2P2a7HZmHoYN2AKbW
+< Link: </buckets/s21997_MYTEST>; rel="up"
+< Last-Modified: Wed, 09 Dec 2020 20:16:57 GMT
+< ETag: "4qzQKY14TLyNelYFApVx3o"
+< Date: Wed, 09 Dec 2020 20:16:57 GMT
+< Content-Type: application/json
+< Content-Length: 82
+< 
+* Connection #0 to host localhost left intact
+{"id":10,"title":"Doc10","name":"Doc10","description":"NO KEY DOC","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ 
+
+
+
+9_
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8ypz/fsaEuygyMJQaZTAlMuaxMuxc43qTLwsA
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+Link: </buckets/s21997_MYTEST>; rel="up"
+Last-Modified: Wed, 09 Dec 2020 20:16:57 GMT
+ETag: "4qzQKY14TLyNelYFApVx3o"
+Date: Wed, 09 Dec 2020 20:23:06 GMT
+Content-Type: application/json
+Content-Length: 82
+
+{"id":10,"title":"Doc10","name":"Doc10","description":"NO KEY DOC","isFake":false}riak@labnbd-virtual-machine:/home/labnbd$ 
+
+
+
+10_
+* Hostname was NOT found in DNS cache
+*   Trying 127.0.0.1...
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> DELETE /buckets/s21997_MYTEST/keys/3ZWu9T7Krz2P2a7HZmHoYN2AKbW?returnbody=true HTTP/1.1
+> User-Agent: curl/7.38.0
+> Host: localhost:8098
+> Accept: */*
+> 
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+* Server MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho) is not blacklisted
+< Server: MochiWeb/1.1 WebMachine/1.10.8 (that head fake, tho)
+< Date: Wed, 09 Dec 2020 20:25:28 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+* Connection #0 to host localhost left intact
+
+

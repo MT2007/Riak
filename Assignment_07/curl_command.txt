@@ -1,0 +1,37 @@
+1_
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/props -X PUT -H "Content-Type:application/json" -d '{"props":{}}'
+ 	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/A?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":1,"title":"Doc1","name":"Doc1","description":"this is the first doc","isFake":false}'
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/B?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":2,"title":"Doc2","name":"Doc2","description":"this is the second doc","isFake":false}'
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/C?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":3,"title":"Doc3","name":"Doc3","description":"this is the third doc","isFake":false}'
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/D?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":4,"title":"Doc4","name":"Doc4","description":"this is the forth doc","isFake":false}'
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/E?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":5,"title":"Doc5","name":"Doc5","description":"this is the fifth doc","isFake":false}'
+
+2_
+
+	curl -i -X GET http://localhost:8098/buckets/s21997_MYTEST/keys/A
+	
+3_
+	curl -v -X PUT -H "Content-Type: application/json" -d '{"id":3,"title":"Doc3","name":"Doc3","description":"this is the first doc","isFake":false, "newField": "NewField3"}' http://localhost:8098/buckets/s21997_MYTEST/keys/C?returnbody=true
+	
+4_
+	curl -v -X PUT -H "Content-Type: application/json" -d '{"id":4,"title":"Doc4","name":"Doc4","description":"this is the forth doc"}' http://localhost:8098/buckets/s21997_MYTEST/keys/D?returnbody=true
+	
+5_
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/E?returnbody=true -X PUT -H "Content-Type:application/json" -d '{"id":5,"title":"Doc5","name":"Doc5","description":"the Changed Data is here","isFake":true}'
+	
+6_
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/B?returnbody=true -X DELETE
+	
+7_
+	curl -v -X GET http://localhost:8098/buckets/s21997_MYTEST/keys/B
+	
+8_
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys?returnbody=true -X POST -H "Content-Type:application/json" -d '{"id":10,"title":"Doc10","name":"Doc10","description":"NO KEY DOC","isFake":false}'
+	
+9_
+	curl -i -X GET http://localhost:8098/buckets/s21997_MYTEST/keys/3ZWu9T7Krz2P2a7HZmHoYN2AKbW
+	
+10_
+	curl -v http://localhost:8098/buckets/s21997_MYTEST/keys/3ZWu9T7Krz2P2a7HZmHoYN2AKbW?returnbody=true -X DELETE
+	
+	
