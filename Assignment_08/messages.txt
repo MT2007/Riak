@@ -1,3 +1,11 @@
-retrieve and print Doc: task8
-modify and retrieve and print: task8 abc
-delete and retrieve and print: null
+Client object successfully created
+Song object created
+Location Song object created
+StoreValue operation created{location: {namespace: {type: default, bucket: s21997_A08}, key: One}, values: []}
+Song object successfully fetched: {location: {namespace: {type: default, bucket: s21997_A08}, key: One}, values: [RiakObject{contentType: application/json, value: {"singer":"Adele","album":"Hello 2015","name":"Hello","price":199}, riakIndexes: null, links: null, userMeta: null, vtag: 2jioZGKSTQXltsPOwowVNo, isDeleted: false, isModified: false, vclock: com.basho.riak.client.api.cap.BasicVClock@252b269d, lastModified: 1608244128915}]}
+Success! update the song check out: {location: {namespace: {type: default, bucket: s21997_A08}, key: One}, values: []}
+Song object successfully fetched: {location: {namespace: {type: default, bucket: s21997_A08}, key: One}, values: [RiakObject{contentType: application/json, value: {"singer":"Adele","album":"Hello 2015","name":"Hello","price":577}, riakIndexes: null, links: null, userMeta: null, vtag: 27hcmU7CSbJ2aAgIomsBK8, isDeleted: false, isModified: false, vclock: com.basho.riak.client.api.cap.BasicVClock@4ef48c1f, lastModified: 1608244128958}]}
+Song object successfully deleted
+Song object successfully fetched: {location: {namespace: {type: default, bucket: s21997_A08}, key: One}, values: []}
+
+Process finished with exit code 0
